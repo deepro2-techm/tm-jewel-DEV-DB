@@ -15,14 +15,12 @@
     role="dialog"
     aria-label="{{ 'products.modal.label' | t }}"
     aria-modal="true"
-    tabindex="-1"
-  >
+    tabindex="-1">
     <button
       id="ModalClose-{{ section.id }}"
       type="button"
       class="product-media-modal__toggle"
-      aria-label="{{ 'accessibility.close' | t }}"
-    >
+      aria-label="{{ 'accessibility.close' | t }}">
       {{ 'icon-close.svg' | inline_asset_content }}
     </button>
 
@@ -30,8 +28,7 @@
       class="product-media-modal__content color-{{ section.settings.color_scheme }} gradient"
       role="document"
       aria-label="{{ 'products.modal.label' | t }}"
-      tabindex="0"
-    >
+      tabindex="0">
       {%- liquid
         if product.selected_or_first_available_variant.featured_media != null
           assign media = product.selected_or_first_available_variant.featured_media
