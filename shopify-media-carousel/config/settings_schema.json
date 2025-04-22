@@ -1,0 +1,51 @@
+{
+  "name": "Thumbnail Carousel Settings",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_thumbnail_carousel",
+      "label": "Enable Thumbnail Carousel",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "thumbnail_size",
+      "label": "Thumbnail Size",
+      "default": 100,
+      "min": 50,
+      "max": 200,
+      "step": 10
+    },
+    {
+      "type": "select",
+      "id": "carousel_layout",
+      "label": "Carousel Layout",
+      "options": [
+        {
+          "value": "horizontal",
+          "label": "Horizontal"
+        },
+        {
+          "value": "vertical",
+          "label": "Vertical"
+        }
+      ],
+      "default": "horizontal"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Enable Autoplay",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "autoplay_speed",
+      "label": "Autoplay Speed (ms)",
+      "default": 3000,
+      "min": 1000,
+      "max": 10000,
+      "step": 500
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{% comment %}
+  This snippet renders a modal for displaying product media in a larger view.
+  It is designed to work with the thumbnail carousel and product media gallery.
+{% endcomment %}
+
+<div id="ProductMediaModal-{{ section.id }}" class="product-media-modal" role="dialog" aria-labelledby="ProductMediaModalLabel-{{ section.id }}" aria-hidden="true">
+  <div class="modal-content">
+    <button class="modal-close" aria-label="{{ 'general.close' | t }}" onclick="closeModal('{{ section.id }}')">
+      <span class="svg-wrapper">
+        {{ 'icon-caret.svg' | inline_asset_content }}
+      </span>
+    </button>
+    <div class="modal-body">
+      <div class="modal-media-viewer">
+        <media-viewer id="MediaViewer-{{ section.id }}" class="media-viewer">
+          <!-- Media content will be dynamically injected here -->
+        </media-viewer>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openModal(sectionId) {
+    document.getElementById('ProductMediaModal-' + sectionId).setAttribute('aria-hidden', 'false');
+  }
+
+  function closeModal(sectionId) {
+    document.getElementById('ProductMediaModal-' + sectionId).setAttribute('aria-hidden', 'true');
+  }
+</script>

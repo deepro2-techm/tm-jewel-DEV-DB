@@ -1,12 +1,12 @@
-{% comment %}
-  Renders a product media modal. Also see 'product-media-gallery'
-
-  Accepts:
-  - product: {Object} Product liquid object
-  - variant_images: {Array} Product images associated with a variant
-
-  Usage:
-  {% render 'product-media-modal' %}
+{% comment %} 
+      Renders a product media modal. Also see 'product-media-gallery'
+     
+      Accepts: 
+      - product: {Object} Product liquid object 
+      - variant_images: {Array} Product images associated with a variant
+     
+      Usage:
+      {% render 'product-media-modal' %} 
 {% endcomment %}
 
 <product-modal id="ProductModal-{{ section.id }}" class="product-media-modal media-modal">
@@ -23,7 +23,9 @@
       aria-label="{{ 'accessibility.close' | t }}">
       {{ 'icon-close.svg' | inline_asset_content }}
     </button>
-
+    <div class="random-text">
+      HELLO WORLD
+    </div>
     <div
       class="product-media-modal__content color-{{ section.settings.color_scheme }} gradient"
       role="document"
